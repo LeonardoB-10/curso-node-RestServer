@@ -1,32 +1,32 @@
 
 ## Instalaciones necesarias npm
-npm install express 
-npm install cors 
-npm install dotenv 
-
-git tag
-git tag -a v0.1 -m "Fin del curso de NodeJS 4_particionesHTTP"
-git push --tags
-
-**Comandos neceasrios para Heroku**
-heroku git:remote -a rest-reserver-vinicio
-git push heroku main
-
+npm install express <br>
+npm install cors <br>
+npm install dotenv <br>
+<br>
+git tag<br>
+git tag -a v0.1 -m "Fin del curso de NodeJS 4_particionesHTTP"<br>
+git push --tags<br>
+<br>
+**Comandos neceasrios para Heroku**<br>
+heroku git:remote -a rest-reserver-vinicio<br>
+git push heroku main <br>
+<br>
 **rest server**
-Sirve para crear un servidor de rest server para poder hacer peticiones http desde cualquier lugar del mundo 
-Su funcionalidad es la de crear un servidor que pueda recibir peticiones http y poder responder a esas peticiones 
+Sirve para crear un servidor de rest server para poder hacer peticiones http desde cualquier lugar del mundo <br>
+Su funcionalidad es la de crear un servidor que pueda recibir peticiones http y poder responder a esas peticiones <br>
 
+<br>
+**nodeJs**<br>
+No olvidar realizar las exportaciones de las variables de entorno<br>
+<br>
 
-**nodeJs**
-No olvidar realizar las exportaciones de las variables de entorno
+**dotenv**<br>
+Sirve para poder crear variables de entorno en el proyecto de nodeJs<br>
 
+**express**<br>
+Sirve para poder crear un servidor de rest server<br>
 
-**dotenv**
-Sirve para poder crear variables de entorno en el proyecto de nodeJs
-
-**express**
-Sirve para poder crear un servidor de rest server
-
-
-**cors**
-Sirve para poder realizar peticiones http desde cualquier lugar del mundo
+<br>
+**cors**<br>
+Sirve para poder realizar peticiones http desde cualquier lugar del mundo<br>
