@@ -42,7 +42,11 @@ reuter.post(
   usuariosPost
 );
 
-reuter.delete("/:id", usuariosDelete);
+reuter.delete("/:id",[
+  check("id", "No es un ID válido").isMongoId(),
+  check("id").custom(existeUsuarioPorId),
+  validarCampos//middleware
+], usuariosDelete);
 
 reuter.patch("/", usuariosPatch);
 
