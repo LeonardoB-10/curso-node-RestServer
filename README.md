@@ -48,3 +48,11 @@ Sirve para poder crear un servidor de rest server.
 **cors**
 Sirve para poder realizar peticiones http desde cualquier lugar del mundo.
 
+**Comando para crear variables de entorno en heroku**
+heroku config: set nombre="" -> Sirve para crear variables de entorno en heroku
+heroku config:unset nombre="" -> para eliminar una variable de entorno
+
+**Subir proyecto en heroku**
+git push heroku main.
+
+
