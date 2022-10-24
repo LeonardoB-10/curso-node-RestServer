@@ -55,4 +55,8 @@ heroku config:unset nombre="" -> para eliminar una variable de entorno
 **Subir proyecto en heroku**
 git push heroku main.
 
+**Por que usar Token?**
+Porque es una forma de autenticacion mas segura que las cookies.
+
+
 

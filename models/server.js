@@ -5,6 +5,7 @@ const { dbConnection } = require("../database/config");
 class Server {
   constructor() {
     this.app = express();
+    // this.app(cors());
 
     this.port = process.env.PORT;
 

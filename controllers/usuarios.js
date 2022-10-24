@@ -11,20 +11,18 @@ const usuariosGet = async (req = request, res = response) => {
   //Solo muestra los campos que se le indiquen
   // const usuarios = await Usuario.find( query )
   //   .skip(Number(desde))
-  //   .limit(Number(limite)); 
-
+  //   .limit(Number(limite));
   // const total = await Usuario.countDocuments(query);
+  const [total, usuarios] = await Promise.all([
+    Usuario.countDocuments(query),
+    Usuario.find(query).skip(Number(desde)).limit(Number(limite)),
+  ]);
 
-  const [total,usuarios] = await Promise.all([
-    Usuario.countDocuments( query), Usuario.find( query ) 
-    .skip(Number(desde))
-    .limit(Number(limite)),
-  ] 
-  );
+  console.log(total, usuarios);
 
   res.json({
-     total,
-      usuarios,
+    total,
+    usuarios,
   });
 };
 
@@ -75,15 +73,12 @@ const usuariosPatch = (req, res) => {
 };
 
 const usuariosDelete = async (req, res) => {
-
   const { id } = req.params;
 
   //Borrado fisico s
   //const usuario = await Usuario.findByIdAndDelete(id);
 
-  const usuario = await Usuario.findByIdAndUpdate(id, {estado: false});
-
-
+  const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
 
   res.json(usuario);
 };
