@@ -102,5 +102,5 @@ Porque es una forma de autenticacion mas segura que las cookies.
 
 
 **cors**<br>
-Sirve para poder realizar peticiones http desde cualquier lugar del mundo<br>
+Sirve para poder realizar peticiones http desde cualquier lugar del mundo.<br>
 
