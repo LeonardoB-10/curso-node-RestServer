@@ -8,11 +8,24 @@ npm install bcryptjs -> Sirve para encriptar las contraseñas
 
 npm install express-validator -> Sirve para validar los datos que se envian al servidor
 
+npm install jsonwebtoken -> Sirve para crear los token de autenticacion
+
 
 
 git tag
 git tag -a v0.1 -m "Fin del curso de NodeJS 4_particionesHTTP"
 git push --tags
+
+## Importante para subir el proyecto a producccion en heroku
+**Especificar las variables de entorno**
+MONGODB_AUTH: mongo<br>
+GOOGLE_CLIENT_ID: <br>
+
+ heroku config -> para ver las variables de entorno<br>
+
+GOOGLE_CLIENT_ID: <br>
+MONGODB_AUTH: <br>
+
 
 **Que es un middleware?**
 Es una funcion que se ejecuta cuando se ejecuta una peticion HTTP y se ejecuta antes de que llegue al controlador de la peticion HTTP.

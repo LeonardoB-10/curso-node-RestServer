@@ -1,27 +1,34 @@
-GET http://localhost:3000
+GET http://localhost:3000/api/usuarios
 
 ###
-GET http://localhost:5000/users/1
 
-###
-POST http://localhost:5000/users
-Content-Type: application/jsons
+POST  http://localhost:3000/api/usuarios
 
 {
-    "name": "Bryan",
-    "email": "john@gmail.com",
-    "gender": "Male"
+    "nombre": "vinicio",
+    "correo" : "vinicio@gmail.com",
+    "password":"Cirilo.10",
+    "rol" : "USER_ROLE"
 }
 
-###
-PATCH http://localhost:5000/users/1
-Content-Type: application/json
+
+GET http://localhost:3000/api/usuarios?limite=2
+
+### 
+#-------------------Login-------------------#
+#Es postman si funciona
+POST http://localhost:3000/api/auth/login
 
 {
-    "name": "M Fikri",
-    "email": "mfikri@gmail.com",
-    "gender": "Male"
+    "correo": "vinicio@gmail.com",
+    "password": "Cirilo.10"
 }
 
+#https://rest-sertver-4-vinicio.herokuapp.com/api/usuarios
 ###
-DELETE http://localhost:5000/users/2
+#Google Sign in
+POST http://localhost:8080/api/auth/google
+
+{
+    "id_token": "asdad848"
+}

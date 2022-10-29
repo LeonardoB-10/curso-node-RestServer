@@ -35,7 +35,7 @@ const UsuarioShema = Schema({
 //Se elimina la contraseña del objeto que se retorna al cliente
 UsuarioShema.methods.toJSON = function () {
   const { __v, password, _id, ...usuario } = this.toObject(); 
-  //usuario.uid = _id;
+  usuario.uid = _id;
   return usuario;
 };
 
