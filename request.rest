@@ -32,3 +32,9 @@ POST http://localhost:8080/api/auth/google
 {
     "id_token": "asdad848"
 }
+
+#Categoria
+### 
+#-------------------Categoria-------------------#
+GET http://localhost:8080/api/categorias
+

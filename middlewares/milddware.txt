@@ -1,6 +1,0 @@
-Solo son una simple funcion
-
-Cualquier milddware que se ejecute primero se tiene acceso a la req
-para usar con otros milddware
-
-al apuntar al index.js se ejecuta el milddware que se encuentra en el index.js

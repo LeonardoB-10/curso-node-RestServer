@@ -45,7 +45,6 @@ reuter.post(
     check("password", "El password debe de ser mas de 6 letras").isLength({
       min: 6,
     }),
-
     check("correo").custom(emailExiste),
     //custom sirve para hacer validaciones personalizadas
     //check("rol", "No es un rol permitido").isIn(["ADMIN_ROLE", "USER_ROLE"],

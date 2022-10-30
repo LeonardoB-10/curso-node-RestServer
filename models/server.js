@@ -9,13 +9,19 @@ class Server {
 
     this.port = process.env.PORT;
 
-    this.usuarioPath = "/api/usuarios";
-    this.usthPath = "/api/auth";
+    /*Se recomienda se forma ordenada*/
+    this.path = {
+      buscaPath: "/api/buscar",
+      categoriaPath: "/api/categorias",
+      productoPath: "/api/productos",
+      usuarioPath: "/api/usuarios",
+      usthPath: "/api/auth",
+    };
 
     //Conectar a base de datos
     this.ConectorDB();
 
-    // Middlewares  
+    // Middlewares
     this.middleware();
 
     //Rutas de mi aplicación
@@ -34,12 +40,15 @@ class Server {
     this.app.use(express.json());
 
     // Directorio público
-    this.app.use(express.static("public"));//-> Para que el servidor pueda servir archivos estáticos
+    this.app.use(express.static("public")); //-> Para que el servidor pueda servir archivos estáticos
   }
 
   router() {
-    this.app.use(this.usthPath, require("../routes/auth.js"));
-    this.app.use(this.usuarioPath, require("../routes/usuarios.js"));
+    this.app.use(this.path.categoriaPath,   require("../routes/categorias.js"));
+    this.app.use(this.path.buscaPath,       require("../routes/buscar.js"));
+    this.app.use(this.path.productoPath,    require("../routes/productos.js"));
+    this.app.use(this.path.usthPath,        require("../routes/auth.js"));
+    this.app.use(this.path.usuarioPath,     require("../routes/usuarios.js"));
 
   }
 

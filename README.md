@@ -99,6 +99,13 @@ git push heroku main.
 Porque es una forma de autenticacion mas segura que las cookies.
 
 
+**MIddlewares**
+Solo son una simple funcion<br>
+
+Cualquier milddware que se ejecute primero se tiene acceso a la req
+para usar con otros milddware<br>
+
+al apuntar al index.js se ejecuta el milddware que se encuentra en el index.js<br>
 
 
 **cors**<br>
