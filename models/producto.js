@@ -32,6 +32,9 @@ const ProductoSchema = Schema({
     type: Boolean,
     default: true,
   },
+  img: {
+    type: String,
+  },
 });
 
 //Se elimina la contraseña del objeto que se retorna al cliente
